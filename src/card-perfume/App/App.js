@@ -3,7 +3,7 @@ import desktopImage from "../product-preview-card-component-main/images/image-pr
 function App() {
   return (
     <div className="card-container bg-white rounded-md overflow-hidden sm:flex ">
-      <picture className="h-full">
+      <picture className="">
         <source srcSet={desktopImage} media="(min-width: 640px)" />
         <img className="w-60" src={mobilePicture} alt="photo of a product" />
       </picture>
