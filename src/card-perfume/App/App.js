@@ -2,9 +2,8 @@ import mobilePicture from "../product-preview-card-component-main/images/image-p
 import desktopImage from "../product-preview-card-component-main/images/image-product-desktop.jpg";
 function App() {
   return (
-    <div className="card-container bg-white rounded-md overflow-hidden flex flex-col sm:flex-row">
+    <div className="card-container bg-white rounded-md overflow-hidden flex flex-col  sm:flex-row">
       <picture className="">
-        <source srcSet={mobilePicture} media="(max-width: 639px)" />
         <source srcSet={desktopImage} media="(min-width: 640px)" />
         <img className="w-60" src={mobilePicture} alt="photo of a product" />
       </picture>
