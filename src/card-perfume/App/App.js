@@ -4,7 +4,11 @@ function App() {
   return (
     <div className="card-container bg-white rounded-md overflow-hidden sm:flex  ">
       <div className="">
-        <img className="sm:hidden w-80" src={mobilePicture} />
+        <img
+          className="sm:hidden w-80"
+          src={mobilePicture}
+          alt="photo of a product"
+        />
         <img src={desktopImage} className="hidden sm:block w-60 " />
       </div>
 
