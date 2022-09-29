@@ -6,7 +6,7 @@ function App() {
       <picture className="w-60">
         <source
           srcSet={desktopImage}
-          media="(min-width: 640px)"
+          media="(min-width: 641px)"
           className="w-60"
         />
         <img className="w-60" src={mobilePicture} alt="photo of a product" />
