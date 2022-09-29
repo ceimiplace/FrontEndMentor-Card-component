@@ -3,7 +3,7 @@ import desktopImage from "../product-preview-card-component-main/images/image-pr
 function App() {
   return (
     <div className="card-container bg-white rounded-md overflow-hidden sm:flex ">
-      <picture>
+      <picture className="h-full">
         <source srcSet={desktopImage} media="(min-width: 640px)" />
         <img className="w-60" src={mobilePicture} alt="photo of a product" />
       </picture>
@@ -25,7 +25,9 @@ function App() {
 function Prices({ newPrice, oldPrice }) {
   return (
     <div className="my-2">
-      <span className="text-green-700 text-xl mr-2">{newPrice}</span>
+      <span className="text-green-700 text-2xl font-medium mr-2">
+        {newPrice}
+      </span>
       <span className="text-stone-400 text-xs line-through">{oldPrice}</span>
     </div>
   );
