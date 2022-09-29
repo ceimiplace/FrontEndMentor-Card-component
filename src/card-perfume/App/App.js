@@ -5,10 +5,10 @@ function App() {
     <div className="card-container bg-white rounded-md overflow-hidden sm:flex ">
       <picture>
         <source srcSet={desktopImage} media="(min-width: 640px)" />
-        <img className="w-80" src={mobilePicture} alt="photo of a product" />
+        <img className="w-60" src={mobilePicture} alt="photo of a product" />
       </picture>
 
-      <div className="content-container p-4 w-80 ">
+      <div className="content-container p-4 w-60 ">
         <TypoCategory text="P E R F U ME" />
         <TypoTitle text="Gabrielle Essence Eau de Parfum" />
         <TypoDescription
@@ -47,7 +47,7 @@ function TypoCategory({ text }) {
   return <div className={`text-sm text-stone-400  my-2`}>{text}</div>;
 }
 function TypoTitle({ text }) {
-  return <div className={`text-xl font-bold my-2`}>{text}</div>;
+  return <div className={`text-2xl font-bold my-2`}>{text}</div>;
 }
 function TypoDescription({ text }) {
   return <div className="text-stone-500">{text}</div>;
