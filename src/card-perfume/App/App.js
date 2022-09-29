@@ -2,15 +2,11 @@ import mobilePicture from "../product-preview-card-component-main/images/image-p
 import desktopImage from "../product-preview-card-component-main/images/image-product-desktop.jpg";
 function App() {
   return (
-    <div className="card-container bg-white rounded-md overflow-hidden sm:flex  ">
-      <div className="">
-        <img
-          className="sm:hidden w-80"
-          src={mobilePicture}
-          alt="photo of a product"
-        />
-        <img src={desktopImage} className="hidden sm:block w-60 " />
-      </div>
+    <div className="card-container bg-white rounded-md overflow-hidden sm:flex ">
+      <picture className="">
+        <source srcSet={desktopImage} media="(min-width: 640px)" />
+        <img className="w-80" src={mobilePicture} alt="photo of a product" />
+      </picture>
 
       <div className="content-container p-4 w-80 ">
         <TypoCategory text="P E R F U ME" />
