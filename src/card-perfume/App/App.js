@@ -2,21 +2,27 @@ import mobilePicture from "../product-preview-card-component-main/images/image-p
 import desktopImage from "../product-preview-card-component-main/images/image-product-desktop.jpg";
 function App() {
   return (
-    <div className="card-container bg-white rounded-md overflow-hidden flex flex-col  sm:flex-row">
-      <picture className="">
-        <source srcSet={desktopImage} media="(min-width: 640px)" />
-        <img className="w-60" src={mobilePicture} alt="photo of a product" />
-      </picture>
+    <div className="main-card-container grow ">
+      <div className=" bg-white rounded-md overflow-hidden flex flex-col  sm:flex-row">
+        <picture className="">
+          <source srcSet={desktopImage} media="(min-width: 640px)" />
+          <img className="w-60" src={mobilePicture} alt="perfume product" />
+        </picture>
 
-      <div className="content-container p-4 w-60 ">
-        <TypoCategory text="P E R F U ME" />
-        <TypoTitle text="Gabrielle Essence Eau de Parfum" />
-        <TypoDescription
-          text=" A floral, solar and voluptuous interpretation composed by Olivier
-          Polge, Perfumer-Creator for the House of CHANEL."
-        />
-        <Prices newPrice={"$149.99"} oldPrice={"$169.99"} />
-        <Button text={"Add to Cart"} icon={"cart-shopping"} />
+        <div className="content-container p-4 w-60 ">
+          <TypoCategory text="P E R F U ME" />
+          <TypoTitle text="Gabrielle Essence Eau de Parfum" />
+          <TypoDescription
+            text=" A floral, solar and voluptuous interpretation composed by Olivier
+              Polge, Perfumer-Creator for the House of CHANEL."
+          />
+          <Prices newPrice={"$149.99"} oldPrice={"$169.99"} />
+          <Button
+            text={"Add to Cart"}
+            icon={"cart-shopping"}
+            specificClass={"buy-btn"}
+          />
+        </div>
       </div>
     </div>
   );
@@ -32,16 +38,15 @@ function Prices({ newPrice, oldPrice }) {
     </div>
   );
 }
-function Button({ icon, text }) {
+function Button({ icon, text, specificClass }) {
   return (
-    <a
-      href="#"
-      className="block text-center text-sm bg-emerald-600 text-white w-full rounded-md p-2"
+    <button
+      className={`block ${specificClass} text-center text-sm bg-emerald-600 text-white w-full rounded-md p-2`}
     >
       <i className={`fa-solid fa-${icon}`}></i>
 
       <span className="ml-2">{text}</span>
-    </a>
+    </button>
   );
 }
 
@@ -54,4 +59,5 @@ function TypoTitle({ text }) {
 function TypoDescription({ text }) {
   return <div className="text-stone-500">{text}</div>;
 }
+
 export default App;
